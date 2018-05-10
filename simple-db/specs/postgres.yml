@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  simple-postgresql:
+      image: postgres:9.6.3-alpine
+      ports:
+          - "5432:5432"
+      volumes:
+          - simple-postgresql-data:/var/lib/postgresql/data
+      environment:
+          POSTGRES_DB: simpledb
+          # POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: somepassword
+
+volumes:
+  simple-postgresql-data:

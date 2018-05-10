@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  simple-db:
+    image: simple-db:v1
+    container_name: simple-db
+    depends_on:
+      - simple-postgresql
+    ports:
+      - 8080:8080
+  simple-postgresql:
+    image: postgres:9.6.3-alpine
+    ports:
+        - "5432:5432"
+    volumes:
+        - simple-postgresql-data:/var/lib/postgresql/data
+    environment:
+        POSTGRES_DB: simpledb
+        # POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: somepassword
+
+volumes:
+  simple-postgresql-data:

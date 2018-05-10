@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+  datasource:
+    #url: jdbc:postgresql://simple-postgresql:5432/simpledb
+    url: jdbc:postgresql://localhost:5432/simpledb
+    username: postgres
+    password: somepassword

@@ -11,6 +11,7 @@
 
     <modules>
         <module>hello-docker</module>
+        <module>simple-db</module>
     </modules>
 
     <properties>
@@ -19,6 +20,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
+        <dockerfile.version>1.3.4</dockerfile.version>
     </properties>
 
     <dependencyManagement>
